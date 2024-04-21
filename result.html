@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <!-- background-image: url('GGU_result.jpg'); -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -11,17 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-
     <title>Result Page</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            filter: brightness(50%);
             font-family: "Poppins", sans-serif;
         }
         .container {
@@ -42,16 +34,12 @@
             background-color: #f2f2f2;
         }
         .poppins-bold {
-            font-family: "Poppins", sans-serif;
             font-weight: 700;
-            font-style: normal;
-          }
+        }
 
-          .poppins-medium {
-            font-family: "Poppins", sans-serif;
+        .poppins-medium {
             font-weight: 600;
-            font-style: normal;
-          }
+        }
 
         .info {
             margin-inline: 120px;
@@ -59,10 +47,22 @@
 
         .heading {
             margin-top: 30px;
+            text-align: center;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px; /* Adjust the width as needed */
+            height: auto;
+            z-index: 1; /* Ensure the logo stays above other content */
         }
     </style>
 </head>
 <body>
+
+    <img class="logo" src="GGUresult.jpg" alt="GGU Logo">
 
     <div class="d-flex flex-row justify-content-center align-items-center">
         <h1 class="poppins-bold heading">GRADE CARD</h1>
@@ -109,35 +109,25 @@
     
         // Example: Replace this with actual fetching from database
         const marksDatabase = {
-            '21070122': { name: 'HARSH GAUTAM', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 35, 'INTERNET TECHNOLOGY': 35, 'PRACTICAL BASED ON SOFT COMPUTING': 12, 'DATA ANALYTICS': 35, 'SOFT COMPUTING': 18 },
-            '21070119': { name: 'GAGAN DEEP SAHU', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 35, 'INTERNET TECHNOLOGY': 35, 'PRACTICAL BASED ON SOFT COMPUTING': 15, 'DATA ANALYTICS': 34, 'SOFT COMPUTING': 15 },
-            '21070124': { name: 'ISHAR', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 23, 'INTERNET TECHNOLOGY': 28, 'PRACTICAL BASED ON SOFT COMPUTING': 12, 'DATA ANALYTICS': 23, 'SOFT COMPUTING': 16 },
-            '21070105': { name: 'ABHISHEK SAO', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 30, 'INTERNET TECHNOLOGY': 24, 'PRACTICAL BASED ON SOFT COMPUTING': 11, 'DATA ANALYTICS': 35, 'SOFT COMPUTING': 12 },
-            '21070158': { name: 'TANISH GAHIRE', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 37, 'INTERNET TECHNOLOGY': 31, 'PRACTICAL BASED ON SOFT COMPUTING': 10, 'DATA ANALYTICS': 33, 'SOFT COMPUTING': 15 },
-            '21070103': { name: 'ABHAY MISHRA', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 78, 'INTERNET TECHNOLOGY': 34, 'PRACTICAL BASED ON SOFT COMPUTING': 54, 'DATA ANALYTICS': 45, 'SOFT COMPUTING': 54 },
-            '21070109': { name: 'ANURAG KAUSHIK', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 54, 'INTERNET TECHNOLOGY': 63, 'PRACTICAL BASED ON SOFT COMPUTING': 43, 'DATA ANALYTICS': 34, 'SOFT COMPUTING': 98 },
-            '21070113': { name: 'BHUPESH RAJPUT', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 89, 'INTERNET TECHNOLOGY': 56, 'PRACTICAL BASED ON SOFT COMPUTING': 33, 'DATA ANALYTICS': 34, 'SOFT COMPUTING': 87 },
-            '21070123': { name: 'HARSH M ISHRA', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 45, 'INTERNET TECHNOLOGY': 87, 'PRACTICAL BASED ON SOFT COMPUTING': 54, 'DATA ANALYTICS': 54, 'SOFT COMPUTING': 56 },
-            '21070130': { name: 'MANISHA RATHORE', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 98, 'INTERNET TECHNOLOGY': 53, 'PRACTICAL BASED ON SOFT COMPUTING': 76, 'DATA ANALYTICS': 21, 'SOFT COMPUTING': 45 },
-            '21070134': { name: 'NITIN ANANT', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 23, 'INTERNET TECHNOLOGY': 23, 'PRACTICAL BASED ON SOFT COMPUTING': 45, 'DATA ANALYTICS': 45, 'SOFT COMPUTING': 18 },
-            '21070139': { name: 'PRASHANT VERMA', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 45, 'INTERNET TECHNOLOGY': 45, 'PRACTICAL BASED ON SOFT COMPUTING': 43, 'DATA ANALYTICS': 56, 'SOFT COMPUTING': 32 },
-            '21070140': { name: 'PRAYANSH AGRAWAL', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 98, 'INTERNET TECHNOLOGY': 32, 'PRACTICAL BASED ON SOFT COMPUTING': 54, 'DATA ANALYTICS': 45, 'SOFT COMPUTING': 90 },
-            '21070141': { name: 'PRIYANSHU DUBEY', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 97, 'INTERNET TECHNOLOGY': 54, 'PRACTICAL BASED ON SOFT COMPUTING': 34, 'DATA ANALYTICS': 32, 'SOFT COMPUTING': 89 },
-            '21070145': { name: 'SAHIL', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 34, 'INTERNET TECHNOLOGY': 32, 'PRACTICAL BASED ON SOFT COMPUTING': 22, 'DATA ANALYTICS': 89, 'SOFT COMPUTING': 34 },
-            '21070146': { name: 'SAHIL KUMAR SHAU', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 55, 'INTERNET TECHNOLOGY': 34, 'PRACTICAL BASED ON SOFT COMPUTING': 45, 'DATA ANALYTICS': 12, 'SOFT COMPUTING': 65 },
-            '21070164': { name: 'VIRESH KUSHWAHA', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 78, 'INTERNET TECHNOLOGY': 22, 'PRACTICAL BASED ON SOFT COMPUTING': 34, 'DATA ANALYTICS': 34, 'SOFT COMPUTING': 45 }
+            '21070122': { 'NAME': 'HARSH GAUTAM', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 35, 'INTERNET TECHNOLOGY': 35, 'PRACTICAL BASED ON SOFT COMPUTING': 12, 'DATA ANALYTICS': 35, 'SOFT COMPUTING': 18, 'CREDIT POINT': 78, 'GRADE': 'B' },
+            '21070119': { 'NAME': 'GAGAN DEEP SAHU', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 35, 'INTERNET TECHNOLOGY': 35, 'PRACTICAL BASED ON SOFT COMPUTING': 15, 'DATA ANALYTICS': 34, 'SOFT COMPUTING': 15, 'CREDIT POINT': 90, 'GRADE': 'B+' },
+            '21070124': { 'NAME': 'ISHAR', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 23, 'INTERNET TECHNOLOGY': 28, 'PRACTICAL BASED ON SOFT COMPUTING': 12, 'DATA ANALYTICS': 23, 'SOFT COMPUTING': 16, 'CREDIT POINT': 56, 'GRADE': 'C' },
+            '21070105': { 'NAME': 'ABHISHEK SAO', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 30, 'INTERNET TECHNOLOGY': 24, 'PRACTICAL BASED ON SOFT COMPUTING': 11, 'DATA ANALYTICS': 35, 'SOFT COMPUTING': 12, 'CREDIT POINT': 97, 'GRADE': 'A+' },
+            '21070158': { 'NAME': 'TANISH GAHIRE', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 37, 'INTERNET TECHNOLOGY': 31, 'PRACTICAL BASED ON SOFT COMPUTING': 10, 'DATA ANALYTICS': 33, 'SOFT COMPUTING': 15, 'CREDIT POINT': 56, 'GRADE': 'B' },
+            '21070103': { 'NAME': 'ABHAY MISHRA', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 78, 'INTERNET TECHNOLOGY': 34, 'PRACTICAL BASED ON SOFT COMPUTING': 54, 'DATA ANALYTICS': 45, 'SOFT COMPUTING': 54, 'CREDIT POINT': 23, 'GRADE': 'B+' },
+            '21070109': { 'NAME': 'ANURAG KAUSHIK', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 54, 'INTERNET TECHNOLOGY': 63, 'PRACTICAL BASED ON SOFT COMPUTING': 43, 'DATA ANALYTICS': 34, 'SOFT COMPUTING': 98, 'CREDIT POINT': 54, 'GRADE': 'B' },
+            '21070113': { 'NAME': 'BHUPESH RAJPUT', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 89, 'INTERNET TECHNOLOGY': 56, 'PRACTICAL BASED ON SOFT COMPUTING': 33, 'DATA ANALYTICS': 34, 'SOFT COMPUTING': 87, 'CREDIT POINT': 32, 'GRADE': 'C' },
+            '21070123': { 'NAME': 'HARSH M ISHRA', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 45, 'INTERNET TECHNOLOGY': 87, 'PRACTICAL BASED ON SOFT COMPUTING': 54, 'DATA ANALYTICS': 54, 'SOFT COMPUTING': 56, 'CREDIT POINT': 21, 'GRADE': 'B' },
+            '21070130': { 'NAME': 'MANISHA RATHORE', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 98, 'INTERNET TECHNOLOGY': 53, 'PRACTICAL BASED ON SOFT COMPUTING': 76, 'DATA ANALYTICS': 21, 'SOFT COMPUTING': 45, 'CREDIT POINT': 23, 'GRADE': 'B+' },
+            '21070134': { 'NAME': 'NITIN ANANT', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 23, 'INTERNET TECHNOLOGY': 23, 'PRACTICAL BASED ON SOFT COMPUTING': 45, 'DATA ANALYTICS': 45, 'SOFT COMPUTING': 18, 'CREDIT POINT': 34, 'GRADE': 'B' },
+            '21070139': { 'NAME': 'PRASHANT VERMA', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 45, 'INTERNET TECHNOLOGY': 45, 'PRACTICAL BASED ON SOFT COMPUTING': 43, 'DATA ANALYTICS': 56, 'SOFT COMPUTING': 32, 'CREDIT POINT': 43, 'GRADE': 'B' },
+            '21070140': { 'NAME': 'PRAYANSH AGRAWAL', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 98, 'INTERNET TECHNOLOGY': 32, 'PRACTICAL BASED ON SOFT COMPUTING': 54, 'DATA ANALYTICS': 45, 'SOFT COMPUTING': 90, 'CREDIT POINT': 23, 'GRADE': 'A+' },
+            '21070141': { 'NAME': 'PRIYANSHU DUBEY', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 97, 'INTERNET TECHNOLOGY': 54, 'PRACTICAL BASED ON SOFT COMPUTING': 34, 'DATA ANALYTICS': 32, 'SOFT COMPUTING': 89, 'CREDIT POINT': 45, 'GRADE': 'B' },
+            '21070145': { 'NAME': 'SAHIL', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 34, 'INTERNET TECHNOLOGY': 32, 'PRACTICAL BASED ON SOFT COMPUTING': 22, 'DATA ANALYTICS': 89, 'SOFT COMPUTING': 34, 'CREDIT POINT': 32, 'GRADE': 'C' },
+            '21070146': { 'NAME': 'SAHIL KUMAR SHAU', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 55, 'INTERNET TECHNOLOGY': 34, 'PRACTICAL BASED ON SOFT COMPUTING': 45, 'DATA ANALYTICS': 12, 'SOFT COMPUTING': 65, 'CREDIT POINT': 56, 'GRADE': 'B' },
+            '21070164': { 'NAME': 'VIRESH KUSHWAHA', 'INTRODUCTION TO ARTIFICIAL INTELLIGENCE': 78, 'INTERNET TECHNOLOGY': 22, 'PRACTICAL BASED ON SOFT COMPUTING': 34, 'DATA ANALYTICS': 34, 'SOFT COMPUTING': 45, 'CREDIT POINT': 78, 'GRADE': 'B' }
         };
-    
-        // Function to calculate credit point
-        function calculateCreditPoint(marks) {
-            var total = 0;
-            for (var key in marks) {
-                if (key !== 'name' && key !== 'rollNumber') {
-                    total += marks[key];
-                }
-            }
-            return total;
-        }
+        
     
         // Function to display marks
         function displayMarks() {
@@ -147,25 +137,33 @@
             if (rollNumber in marksDatabase) {
                 var studentMarks = marksDatabase[rollNumber];
                 
-                // Add roll number, name, and credit point row
+                // Add roll number, name, credit point, and grade row
                 var row = table.insertRow();
                 var cell1 = row.insertCell();
                 cell1.innerHTML = 'Roll Number';
                 var cell2 = row.insertCell();
                 cell2.innerHTML = rollNumber;
+
                 var row = table.insertRow();
                 var cell1 = row.insertCell();
                 cell1.innerHTML = 'Name';
                 var cell2 = row.insertCell();
-                cell2.innerHTML = studentMarks.name;
+                cell2.innerHTML = studentMarks['NAME'];
 
-                var name = document.getElementById("name");
-                name.innerHTML = studentMarks.name
-                var uid = document.getElementById("uid");
-                uid.innerHTML = rollNumber;
-                
+                var row = table.insertRow();
+                var cell1 = row.insertCell();
+                cell1.innerHTML = 'Credit Point';
+                var cell2 = row.insertCell();
+                cell2.innerHTML = studentMarks['CREDIT POINT'];
+
+                var row = table.insertRow();
+                var cell1 = row.insertCell();
+                cell1.innerHTML = 'Grade';
+                var cell2 = row.insertCell();
+                cell2.innerHTML = studentMarks['GRADE'];
+
                 for (var key in studentMarks) {
-                    if (key !== 'name') {
+                    if (key !== 'NAME' && key !== 'CREDIT POINT' && key !== 'GRADE') {
                         var row = table.insertRow();
                         var cell1 = row.insertCell();
                         cell1.innerHTML = key.replace('_', ' '); // Convert underscore to space
@@ -173,12 +171,6 @@
                         cell2.innerHTML = studentMarks[key];
                     }
                 }
-
-                var row = table.insertRow();
-                var cell1 = row.insertCell();
-                cell1.innerHTML = 'Credit Point';
-                var cell2 = row.insertCell();
-                cell2.innerHTML = calculateCreditPoint(studentMarks);
             } else {
                 // If roll number is not found, display a message
                 var row = table.insertRow();
@@ -189,11 +181,9 @@
             }
         }
 
-    
         // Call the displayMarks function to populate the table
         displayMarks();
     </script>
-    
     
 </body>
 </html>
