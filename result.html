@@ -150,6 +150,16 @@
                 var cell2 = row.insertCell();
                 cell2.innerHTML = studentMarks['NAME'];
 
+                for (var key in studentMarks) {
+                    if (key !== 'NAME') {
+                        var row = table.insertRow();
+                        var cell1 = row.insertCell();
+                        cell1.innerHTML = key.replace('_', ' '); // Convert underscore to space
+                        var cell2 = row.insertCell();
+                        cell2.innerHTML = studentMarks[key];
+                    }
+                }
+
                 var row = table.insertRow();
                 var cell1 = row.insertCell();
                 cell1.innerHTML = 'Credit Point';
@@ -162,15 +172,6 @@
                 var cell2 = row.insertCell();
                 cell2.innerHTML = studentMarks['GRADE'];
 
-                for (var key in studentMarks) {
-                    if (key !== 'NAME' && key !== 'CREDIT POINT' && key !== 'GRADE') {
-                        var row = table.insertRow();
-                        var cell1 = row.insertCell();
-                        cell1.innerHTML = key.replace('_', ' '); // Convert underscore to space
-                        var cell2 = row.insertCell();
-                        cell2.innerHTML = studentMarks[key];
-                    }
-                }
             } else {
                 // If roll number is not found, display a message
                 var row = table.insertRow();
@@ -184,6 +185,5 @@
         // Call the displayMarks function to populate the table
         displayMarks();
     </script>
-    
 </body>
 </html>
